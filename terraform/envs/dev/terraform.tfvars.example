@@ -1,0 +1,13 @@
+project            = "mindmeld"
+aws_region         = "us-east-1"
+vpc_cidr           = "10.2.0.0/16"
+allowed_cidr       = "203.0.113.0/32"   # Replace with your Jenkins server IP
+
+redis_node_type    = "cache.t4g.micro"
+kubernetes_version = "1.29"
+node_instance_type = "t3.small"
+node_desired       = 1
+node_min           = 1
+node_max           = 2
+
+# export TF_VAR_redis_auth_token="$(openssl rand -base64 32)"
